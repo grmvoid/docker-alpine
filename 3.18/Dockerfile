@@ -1,7 +1,4 @@
-ARG ALPINE_VERSION
-ARG TARGET_PLATFORM
-
-FROM alpine:${ALPINE_VERSION}
+FROM alpine:3.18.5
 
 LABEL org.opencontainers.image.title="alpine"
 LABEL org.opencontainers.image.description="a litte wrapper around base image of alpine."
@@ -23,5 +20,4 @@ RUN set -xe; \
         git  \
         wget; \
     \
-    dockerplatform=${TARGET_PLATFORM:-linux/amd64}; \
     rm -rf /var/cache/apk/*
