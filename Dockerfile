@@ -20,6 +20,7 @@ RUN set -xe; \
         p7zip \
         tar \
         unzip \
+        git  \
         wget; \
     \
     dockerplatform=${TARGET_PLATFORM:-linux/amd64}; \
